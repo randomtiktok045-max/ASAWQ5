@@ -25,10 +25,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             className="group"
         >
             <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100">
-                <a
-                    href={process.env.NODE_ENV === 'production' ? `/products/${product.id}/index.html` : `/products/${product.id}`}
-                    className="block"
-                >
+                <div className="block">
                     <div className="relative aspect-square bg-gray-100 overflow-hidden">
                         {product.image ? (
                             <Image
@@ -56,7 +53,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                             {product.price.toLocaleString('en-IQ')} IQD
                         </p>
                     </div>
-                </a>
+                </div>
 
                 <div className="px-4 pb-4">
                     <motion.button
